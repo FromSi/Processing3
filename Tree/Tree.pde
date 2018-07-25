@@ -6,7 +6,7 @@ void setup(){
 }
 
 void draw(){
-  background(0);
+  background(38, 50, 56);
   stroke(132,255,255);
 
   new Stick(new float[] {start[0], start[1]}, 100, 6, true);

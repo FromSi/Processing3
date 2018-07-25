@@ -27,30 +27,30 @@ public class Stick{
      recursion--;
      
      pushMatrix();
-     translate(start[0],start[1]);
-     pX = 0 + cos(radians(-90))*radius;
-     pY = 0 + sin(radians(-90))*radius;
-     line(0,0,pX,pY);
+     translate(start[0], start[1]);
+     pX = 0 + cos(radians(-90)) * radius;
+     pY = 0 + sin(radians(-90)) * radius;
+     line(0, 0, pX, pY);
      popMatrix();
      
      pushMatrix();
-     translate(pX+start[0],pY+start[1]);
+     translate(pX+start[0], pY+start[1]);
      drawLineOne();
      drawLineTwo();
-     line(0,0,pXOne,pYOne);
-     line(0,0,pXTwo,pYTwo);    
+     line(0, 0, pXOne, pYOne);
+     line(0, 0, pXTwo, pYTwo);    
      popMatrix();
      
      if (recursion != -1){
        new Stick(
-                 new float[] {pX + pXOne + start[0], pY+pYOne + start[1]}, 
+                 new float[] {pX + pXOne + start[0], pY + pYOne + start[1]}, 
                  radius * 0.7, 
                  recursion,
                  false
                  );
                  
        new Stick(
-                 new float[] {pX + pXTwo + start[0], pY+pYTwo + start[1]}, 
+                 new float[] {pX + pXTwo + start[0], pY + pYTwo + start[1]}, 
                  radius * 0.7, 
                  recursion,
                  false
@@ -58,16 +58,16 @@ public class Stick{
      }
    } else {
      pushMatrix();
-     translate(start[0],start[1]);
+     translate(start[0], start[1]);
      drawLineOne();
      drawLineTwo();
-     line(0,0,pXOne,pYOne);
-     line(0,0,pXTwo,pYTwo);    
+     line(0, 0, pXOne, pYOne);
+     line(0, 0, pXTwo, pYTwo);    
      popMatrix();
      
      if (recursion != -1){
-       new Stick(new float[] {pXOne + start[0], pYOne + start[1]}, radius*0.7, recursion, false);
-       new Stick(new float[] {pXTwo + start[0], pYTwo + start[1]}, radius*0.7, recursion, false);
+       new Stick(new float[] {pXOne + start[0], pYOne + start[1]}, radius * 0.7, recursion, false);
+       new Stick(new float[] {pXTwo + start[0], pYTwo + start[1]}, radius * 0.7, recursion, false);
      }
    } 
  }
