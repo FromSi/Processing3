@@ -12,7 +12,7 @@ String[] title = {"Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","
 String[] diameter = {"4,900 km","12,100 km","12,742 km","6,799 km","141,000 km","120,536 km","50,000 km","49,528 km","2,370 km"};
 
 void setup(){
-  size(900, 600);
+  size(900, 600, P2D);
   f = loadFont("Rajdhani-Light-48.vlw");  
   
   center = height / 2;
