@@ -7,9 +7,9 @@ Planet[] planets;
 Sun sun;
 Moon moon;
 
-float[] sizePlanets = {4.5,10.3,10,5.5,25,23,15,15,4};
-String[] title = {"Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune","Pluto"};
-String[] diameter = {"4,900 km","12,100 km","12,742 km","6,799 km","141,000 km","120,536 km","50,000 km","49,528 km","2,370 km"};
+float[] sizePlanets = {4.5, 10.3, 10, 5.5, 25, 23, 15, 15, 4};
+String[] title = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"};
+String[] diameter = {"4,900 km", "12,100 km", "12,742 km", "6,799 km", "141,000 km", "120,536 km", "50,000 km", "49,528 km", "2,370 km"};
 
 void setup(){
   size(900, 600, P2D);

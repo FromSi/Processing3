@@ -1,4 +1,4 @@
-int size = 4;
+int sizeM = 4;
 int indent = 10;
 float radiusEye;
 int countTriangle = 50;
@@ -26,29 +26,29 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  background(38, 50, 56);
   stroke(132, 255, 255);
   
   drawTriangles();
   
-  fill(0);
+  fill(38, 50, 56);
   
   triangle(
-  width / size, 
-  height-(height/size), 
+  width / sizeM, 
+  height-(height / sizeM), 
   width / 2, 
-  height/size, 
-  width-(width / size),
-  height-(height/size)
+  height/sizeM, 
+  width-(width / sizeM),
+  height-(height / sizeM)
   );
   
   triangle(
-  width / size + (indent * 4), 
-  height - (height / size) - (indent * 4), 
+  width / sizeM + (indent * 4), 
+  height - (height / sizeM) - (indent * 4), 
   width / 2, 
-  height / size + indent, 
-  width - (width / size) - (indent * 4),
-  height - (height / size) - (indent * 4)
+  height / sizeM + indent, 
+  width - (width / sizeM) - (indent * 4),
+  height - (height / sizeM) - (indent * 4)
   );
   
   beginShape();
@@ -71,11 +71,11 @@ void draw() {
   
   fill(132, 255, 255);
   textAlign(CENTER);
-  text("Illuminati", width / 2, width - (width / size) - indent);
+  text("Illuminati", width / 2, width - (width / sizeM) - indent);
 }
 
 void drawTriangles(){
-  fill(0);
+  fill(38, 50, 56);
   for(int i = 0; i < countTriangle; i++){
     if((i % 2) == 0){
       triangleRadius[i][0]--;
@@ -88,12 +88,12 @@ void drawTriangles(){
     }
     
     triangle(
-            (height / 2) + cos(radians(-180)) * (width / size) - ((countTriangle - i) * (indent * 2)), 
-            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height - (height / size)) + ((countTriangle - i) * (indent * 2)), 
+            (height / 2) + cos(radians(-180)) * (width / sizeM) - ((countTriangle - i) * (indent * 2)), 
+            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height - (height / sizeM)) + ((countTriangle - i) * (indent * 2)), 
             (height / 2) + cos(radians(-90)) * (width / 2), 
-            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height/size) - ((countTriangle - i) * (indent * 2)), 
-            (height / 2) + cos(radians(0)) * (width / size) + ((countTriangle - i) * (indent * 2)),
-            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height - (height / size)) + ((countTriangle - i) * (indent * 2))
+            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height/sizeM) - ((countTriangle - i) * (indent * 2)), 
+            (height / 2) + cos(radians(0)) * (width / sizeM) + ((countTriangle - i) * (indent * 2)),
+            ((height / 2) + ((height / 4) / 2)) + sin(radians(triangleRadius[i][0])) * (height - (height / sizeM)) + ((countTriangle - i) * (indent * 2))
     );
   }
 }
