@@ -1,6 +1,3 @@
-import java.util.Random;
-import java.util.ArrayList;
-
 final int SIZE_APP_W = 600;
 final int SIZE_APP_H = 600;
 
@@ -11,8 +8,6 @@ final float PADDING = (SIZE_APP_H - (COUNT_STRING * SIZE_H)) / (int) COUNT_STRIN
 ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
 
 float MOVE_STRING = 0;
-
-Random rand = new Random(System.currentTimeMillis());
 
 void settings(){
   
@@ -95,7 +90,7 @@ ArrayList<Integer> generateString(){
   ArrayList<Integer> list = new ArrayList<Integer>();
   
   while(end != SIZE_APP_W){
-    int r = rand.nextInt(((SIZE_APP_W / 3) - 50) + 1) + 50;
+    float r = random(50, (SIZE_APP_W / 3) - 50);
     
     if((end + r) <= (SIZE_APP_W - 50)){
       end += r;
